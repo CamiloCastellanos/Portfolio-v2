@@ -1,0 +1,17 @@
+<div class="mt-10">
+  <button
+    class="group flex flex-col items-center gap-2 cursor-pointer"
+    (click)="scrollNextSection()"
+  >
+    <div
+      class="w-6 h-10 rounded-full border border-[var(--border-strong)] flex justify-center p-1 group-hover:border-[var(--accent)] transition"
+    >
+      <div
+        class="w-1.5 h-1.5 rounded-full bg-[var(--text-muted)] animate-scroll-dot group-hover:bg-[var(--accent)]"
+      ></div>
+    </div>
+    <span class="text-xs text-[var(--text-muted)] group-hover:text-[var(--accent)] transition">
+      Scroll to explore
+    </span>
+  </button>
+</div>

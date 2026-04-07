@@ -1,0 +1,31 @@
+<span class="text-xl text-[var(--text-muted)] mb-2"> 👋 Hello, I'm </span>
+<h1 class="text-4xl md:text-5xl font-semibold text-[var(--text-primary)] leading-tight">
+  Camilo Castellanos
+  <br />
+  <span class="text-[var(--accent)]"> Full Stack Developer </span>
+</h1>
+
+<p class="mt-4 text-base md:text-lg text-[var(--text-secondary)] max-w-lg">
+  Construyo experiencias digitales modernas, enfocadas en rendimiento, diseño limpio y código
+  escalable.
+</p>
+
+<div class="flex items-center gap-3 mt-6">
+  <button
+    class="px-5 py-2.5 rounded-xl bg-[var(--accent)] text-white text-sm font-medium hover:bg-[var(--accent-hover)] transition-all duration-200 flex items-center"
+    (click)="scrollToProjects()"
+  >
+    Ver proyectos
+    <ng-icon class="ml-2" name="bootstrapFolder" [size]="sizeIcon" />
+  </button>
+  <a
+    [href]="urlCV"
+    target="_blank"
+    class="px-5 py-2.5 rounded-xl border border-[var(--border)] text-sm font-medium text-[var(--text-primary)] hover:bg-[var(--bg-hover)] transition-all duration-200 flex items-center"
+  >
+    Descargar CV
+    <ng-icon class="ml-2" name="bootstrapDownload" [size]="sizeIcon" />
+  </a>
+</div>
+
+<call-to-scroll class="flex flex-col items-center"></call-to-scroll>
