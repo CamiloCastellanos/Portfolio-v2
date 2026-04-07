@@ -1,0 +1,82 @@
+<header
+  class="profile-and-navbar-fixed hidden md:block z-30 mx-auto w-full max-w-3xl rounded-2xl border border-[var(--border)] bg-[var(--bg-card)]/80 backdrop-blur-xl shadow-sm"
+
+>
+  <div class="flex items-center justify-between px-6 py-3">
+    <nav class="flex items-center gap-2">
+      @for (item of navItems; track $index) {
+        <button
+          (click)="goToSection(item.id)"
+          class="px-3 py-1.5 text-sm rounded-lg transition-all duration-200"
+          [ngClass]="
+            activeSection === item.id
+              ? 'bg-[var(--accent-subtle)] text-[var(--accent)] font-medium'
+              : 'text-[var(--text-secondary)] hover:bg-[var(--bg-hover)] hover:text-[var(--text-primary)]'
+          "
+        >
+          {{ item.label }}
+        </button>
+      }
+    </nav>
+
+    <div class="flex items-center gap-2">
+      <translation-button></translation-button>
+      <button
+        (click)="toggle()"
+        class="flex items-center justify-center w-9 h-9 rounded-full border border-[var(--border)] hover:bg-[var(--bg-hover)] transition"
+      >
+        @if (themeService.isDark()) {
+          <ng-icon name="heroSun" size="18" class="text-[var(--text-primary)]"></ng-icon>
+        } @else {
+          <ng-icon name="heroMoon" size="18" class="text-[var(--text-secondary)]"></ng-icon>
+        }
+      </button>
+    </div>
+  </div>
+</header>
+
+<header
+  class="fixed bottom-2 left-1/2 -translate-x-1/2 z-50 w-[calc(100%-32px)] max-w-md md:hidden"
+>
+  <div
+    class="flex items-center justify-between px-4 py-2 rounded-2xl border border-[var(--border)] bg-[var(--bg-card)]/80 backdrop-blur-xl shadow-lg"
+  >
+    @for (item of navItems; track $index) {
+      <button
+        (click)="goToSection(item.id)"
+        class="flex flex-col items-center justify-center flex-1 py-1 transition"
+      >
+        <ng-icon
+          [name]="item.icon"
+          size="20"
+          class="transition"
+          [ngClass]="
+            activeSection === item.id ? 'text-[var(--accent)]' : 'text-[var(--text-muted)]'
+          "
+        ></ng-icon>
+
+        <span
+          class="text-[10px] mt-1 transition"
+          [ngClass]="
+            activeSection === item.id ? 'text-[var(--accent)]' : 'text-[var(--text-muted)]'
+          "
+        >
+          {{ item.label }}
+        </span>
+      </button>
+    }
+
+    <translation-button></translation-button>
+
+    <button
+      (click)="toggle()"
+      class="ml-2 flex items-center justify-center w-9 h-9 rounded-full border border-[var(--border)] hover:bg-[var(--bg-hover)] transition"
+    >
+      @if (themeService.isDark()) {
+        <ng-icon name="heroSun" size="18"></ng-icon>
+      } @else {
+        <ng-icon name="heroMoon" size="18"></ng-icon>
+      }
+    </button>
+  </div>
+</header>
