@@ -1,3 +1,61 @@
-/* You can add global styles to this file, and also import other style files */
-
 @import 'tailwindcss';
+@plugin "daisyui";
+
+/* ── LIGHT MODE (default) ───────────────────── */
+:root {
+  /* Backgrounds */
+  --bg-base: #f5f4f0;
+  --bg-card: #ffffff;
+  --bg-sidebar: #eeecea;
+  --bg-hover: #eceae6; /* Borders */
+  --border: #e2e0d8;
+  --border-strong: #c8c5bc; /* Typography */
+  --text-primary: #1a1917;
+  --text-secondary: #5c5a56;
+  --text-muted: #9b9891; /* Acento */
+  --accent-subtle: #eef2ff;
+  --accent-border: #c7d2fe;
+  --accent: #4f46e5;
+  --accent-hover: #4338ca;
+  --accent-text: #312e81; /* Transición suave */
+  --transition: background 0.25s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+/* ── DARK MODE ──────────────────────────────── */
+[data-theme='dark'] {
+  --bg-base: #0f0f13;
+  --bg-card: #1c1b22;
+  --bg-sidebar: #16151c;
+  --bg-hover: #252430;
+  --border: #2e2d38;
+  --border-strong: #47455a;
+  --text-primary: #f0eee8;
+  --text-secondary: #9896a0;
+  --text-muted: #5c5a68;
+  --accent-subtle: #1e1b35;
+  --accent-border: #3d3870;
+  --accent: #7c6fe0;
+  --accent-hover: #6b5fd0;
+  --accent-text: #a89cf5;
+} /* ── APLICAR A TODOS LOS ELEMENTOS ─────────── */
+
+html {
+  background: var(--bg-base);
+}
+
+body {
+  color: var(--text-primary);
+  transition: var(--transition);
+}
+
+.profile-and-navbar-fixed {
+  position: static;
+  top: auto;
+}
+
+@media (min-width: 1024px) {
+  .profile-and-navbar-fixed {
+    position: fixed;
+    top: 3rem;
+  }
+}
