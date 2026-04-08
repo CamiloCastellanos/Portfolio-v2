@@ -1,13 +1,16 @@
 import { Component } from '@angular/core';
+// ng-icons
 import { NgIcon, provideIcons } from '@ng-icons/core';
 import { bootstrapFiletypeDoc, bootstrapGithub, bootstrapLinkedin } from '@ng-icons/bootstrap-icons';
 import { ionMail } from '@ng-icons/ionicons';
 import { heroDocumentArrowDownSolid } from '@ng-icons/heroicons/solid';
+// Transloco
+import { TranslocoPipe } from '@ngneat/transloco';
 
 
 @Component({
   selector: 'profile',
-  imports: [NgIcon],
+  imports: [NgIcon, TranslocoPipe],
   templateUrl: './profile.html',
   styleUrl: './profile.css',
   viewProviders: [provideIcons({

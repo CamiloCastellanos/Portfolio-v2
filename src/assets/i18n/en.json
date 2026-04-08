@@ -1,0 +1,26 @@
+{
+  "profile": {
+    "position": "Full-Stack Developer",
+    "quote": "Changing the world one line of code at a time",
+    "experience": "+5 years of experience",
+    "career": "Systems engineer",
+    "titleTraining": "Training",
+    "training1": "Specialization in strategic data analytics",
+    "training2": "Systems Engineering"
+  },
+  "navbar": {
+    "home": "Home",
+    "about": "About Me",
+    "resume": "Resume",
+    "certificate": "certificates",
+    "project": "Projects"
+  },
+  "home": {
+    "greeting": "Hello, I'm",
+    "position": "Full Stack Developer",
+    "text": "I build modern digital experiences focused on performance, clean design, and scalable code.",
+    "btnProject": "View projects",
+    "btnCV": "Download CV",
+    "textScroll": "Scroll to explore"
+  }
+}

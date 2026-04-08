@@ -1,0 +1,26 @@
+{
+  "profile": {
+    "position": "Desarrollador Full-Stack",
+    "quote": "Cambiando el mundo una línea de código a la vez",
+    "experience": "+5 años de experiencia",
+    "career": "Ingeniero de sistemas",
+    "titleTraining": "Formación",
+    "training1": "Especialización en analítica estratégica de datos",
+    "training2": "Ingeniería de Sistemas"
+  },
+  "navbar": {
+    "home": "Home",
+    "about": "Acerca de Mí",
+    "resume": "Experiencia Laboral",
+    "certificate": "Certificados",
+    "project": "Proyectos"
+  },
+  "home": {
+    "greeting": "Hola, soy",
+    "position": "Desarrollador Full-Stack",
+    "text": "Construyo experiencias digitales modernas, enfocadas en rendimiento, diseño limpio y código escalable.",
+    "btnProject": "Ver proyectos",
+    "btnCV": "Descargar CV",
+    "textScroll": "Scroll to explore"
+  }
+}

@@ -2,13 +2,15 @@ import { Component } from '@angular/core';
 //
 import { NgIcon, provideIcons } from '@ng-icons/core';
 import { bootstrapDownload, bootstrapFolder } from '@ng-icons/bootstrap-icons';
+// Transloco
+import { TranslocoPipe } from '@ngneat/transloco';
 //
 import { CallToScroll } from './components/call-to-scroll/call-to-scroll';
 import { ScrollService } from '../../shared/services/scroll-service';
 
 @Component({
   selector: 'home',
-  imports: [NgIcon, CallToScroll],
+  imports: [NgIcon, CallToScroll, TranslocoPipe],
   templateUrl: './home.html',
   styleUrl: './home.css',
   viewProviders: [provideIcons({
