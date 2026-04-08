@@ -1,0 +1,20 @@
+<div class="relative mb-6 sm:mb-8">
+  <h3 class="text-lg sm:text-xl font-medium text-[var(--text-primary)]">
+    {{ 'tools&languages.title' | transloco }}
+  </h3>
+  <div class="absolute -bottom-2 left-0 w-8 h-0.5 bg-[var(--accent-border)] rounded-full"></div>
+</div>
+<div class="grid grid-cols-2 sm:grid-cols-5 md:grid-cols-5 lg:grid-cols-5 xl:grid-cols-5 gap-4">
+  @for (tool of tools; track $index) {
+    <div
+      class="group flex items-center gap-3 p-3 rounded-xl bg-[var(--bg-card)] border border-[var(--border)] hover:border-[var(--accent-border)] hover:shadow-md transition-all duration-300 hover:-translate-y-0.5"
+    >
+      <img [src]="tool.icon" [alt]="tool.name" class="w-8 h-8 object-contain" />
+      <span
+        class="text-sm font-medium text-[var(--text-primary)] group-hover:text-[var(--accent)] transition-colors"
+      >
+        {{ tool.name }}
+      </span>
+    </div>
+  }
+</div>
