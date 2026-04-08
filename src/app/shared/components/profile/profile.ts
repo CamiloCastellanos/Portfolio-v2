@@ -6,7 +6,9 @@ import { ionMail } from '@ng-icons/ionicons';
 import { heroDocumentArrowDownSolid } from '@ng-icons/heroicons/solid';
 // Transloco
 import { TranslocoPipe, TranslocoService } from '@ngneat/transloco';
+//hot-toast
 import { HotToastService } from '@ngxpert/hot-toast';
+import confetti from 'canvas-confetti';
 
 @Component({
   selector: 'profile',
@@ -44,6 +46,11 @@ export class Profile implements OnInit {
       duration: 2000,
       icon: "📋",
       dismissible: true
+    });
+    confetti({
+      particleCount: 100,
+      spread: 70,
+      origin: { y: 0.3 }
     });
   }
 }
