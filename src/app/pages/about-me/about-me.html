@@ -1,37 +1,25 @@
 <section class="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16">
   <div class="flex flex-col justify-center">
-    <h2 class="text-2xl md:text-3xl tracking-tight text-[var(--text-primary)] mb-4">Sobre mí</h2>
-    <p class="text-[var(--text-secondary)] leading-relaxed">
-      <strong class="text-[var(--text-primary)]">
-        ¡👋🏻 Hola! Soy Camilo Castellanos, Desarrollador Full Stack
-      </strong>
-      apasionado por la creación de soluciones digitales con impacto.
+    <h2 class="text-2xl md:text-3xl tracking-tight text-[var(--text-primary)] mb-4">
+      {{ 'about.title' | transloco }}
+    </h2>
+    <p
+      class="text-[var(--text-secondary)] leading-relaxed"
+      [innerHTML]="'about.text1' | transloco"
+    ></p>
+
+    <p class="mt-4 text-[var(--text-secondary)] leading-relaxed">
+      {{ 'about.text2' | transloco }}
     </p>
 
     <p class="mt-4 text-[var(--text-secondary)] leading-relaxed">
-      Me especializo en construir interfaces modernas en el frontend y soluciones robustas en el
-      backend, enfocándome en crear aplicaciones escalables, eficientes y alineadas con las
-      necesidades del negocio.
+      {{ 'about.text3' | transloco }}
     </p>
 
-    <p class="mt-4 text-[var(--text-secondary)] leading-relaxed">
-      Cuando no estoy escribiendo código, me encontrarás:
-    </p>
-
-    <ul class="mt-4 space-y-3 text-sm text-[var(--text-secondary)] leading-relaxed">
-      <li>
-        🐾 <strong class="text-[var(--text-primary)]">Cuidando de mis mascotas</strong> (Skay, Lilo,
-        Appa y Maracuyá)
-      </li>
-      <li>🎮 <strong class="text-[var(--text-primary)]">Jugando videojuegos</strong></li>
-      <li>
-        🃏 <strong class="text-[var(--text-primary)]">Juegos de mesa</strong> (Catan nunca falla)
-      </li>
-      <li>
-        🌱 <strong class="text-[var(--text-primary)]">Aprendiendo constantemente</strong> nuevas
-        tecnologías
-      </li>
-    </ul>
+    <ul
+      class="mt-4 space-y-3 text-sm text-[var(--text-secondary)] leading-relaxed"
+      [innerHTML]="'about.listActivities' | transloco"
+    ></ul>
   </div>
 
   <div class="flex flex-col gap-6">
@@ -41,7 +29,7 @@
       <h3 class="text-lg text-[var(--text-primary)] mb-2">Frontend</h3>
 
       <p class="text-sm text-[var(--text-secondary)] mb-4">
-        Desarrollo interfaces modernas, responsivas y enfocadas en la experiencia del usuario.
+        {{ 'about.frontend' | transloco }}
       </p>
 
       <div class="flex flex-wrap gap-2">
@@ -68,7 +56,7 @@
       <h3 class="text-lg text-[var(--text-primary)] mb-2">Backend</h3>
 
       <p class="text-sm text-[var(--text-secondary)] mb-4">
-        Construyo APIs robustas, seguras y escalables para soportar aplicaciones modernas.
+        {{ 'about.backend' | transloco }}
       </p>
 
       <div class="flex flex-wrap gap-2">
@@ -105,5 +93,5 @@
 <p
   class="mt-6 text-lg text-[var(--text-muted)] border-l-2 border-[var(--accent-border)] pl-4 italic"
 >
-  “Detrás de cada línea de código hay una oportunidad para resolver problemas reales.”
+  {{ 'about.quote' | transloco }}
 </p>

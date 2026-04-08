@@ -22,5 +22,15 @@
     "btnProject": "Ver proyectos",
     "btnCV": "Descargar CV",
     "textScroll": "Scroll to explore"
+  },
+  "about": {
+    "title": "Acerca de Mí",
+    "text1": "<strong class='text-[var(--text-primary)]'>¡👋🏻 Hola! Soy Camilo Castellanos, Desarrollador Full Stack</strong>apasionado por la creación de soluciones digitales con impacto.",
+    "text2": "Me especializo en construir interfaces modernas en el frontend y soluciones robustas en el backend, enfocándome en crear aplicaciones escalables, eficientes y alineadas con las necesidades del negocio.",
+    "text3": "Cuando no estoy escribiendo código, me encontrarás:",
+    "listActivities": "<li> 🐾 <strong class='text-[var(--text-primary)]'>Cuidando de mis mascotas</strong> (Skay, Lilo, Appa y Maracuyá)</li><li>🎮 <strong class='text-[var(--text-primary)]'>Jugando videojuegos</strong> (¿Jugamos una partida?)</li><li>🃏 <strong class='text-[var(--text-primary)]'>Juegos de mesa</strong> (Catan nunca falla)</li><li> 🌱 <strong class='text-[var(--text-primary)]'>Aprendiendo constantemente</strong> (ya sea de una nueva tecnología, un nuevo juego de mesa).</li>",
+    "frontend": "Desarrollo interfaces modernas, responsivas y enfocadas en la experiencia del usuario.",
+    "backend": "Construyo APIs robustas, seguras y escalables para soportar aplicaciones modernas.",
+    "quote": "“Detrás de cada línea de código hay una oportunidad para resolver problemas reales.”"
   }
 }
