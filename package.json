@@ -23,7 +23,9 @@
     "@ng-icons/heroicons": "^33.2.0",
     "@ng-icons/ionicons": "^33.2.0",
     "@ng-icons/simple-icons": "^33.2.0",
+    "@ngneat/overview": "^7.0.0",
     "@ngneat/transloco": "^6.0.4",
+    "@ngxpert/hot-toast": "^6.1.0",
     "firebase": "^12.11.0",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0"

@@ -7,6 +7,7 @@ import { provideTransloco, TranslocoService } from '@ngneat/transloco';
 import { TranslocoHttpLoader } from './shared/services/transloco-http-loader';
 import { firstValueFrom } from 'rxjs';
 import { LanguageDetector } from './shared/services/language-detector';
+import { provideHotToastConfig } from '@ngxpert/hot-toast';
 
 const firebase = {
   apiKey: "AIzaSyCPo7JTRBbDoU2yIbhbTNREWACO7xlkMew",
@@ -61,6 +62,7 @@ export const appConfig: ApplicationConfig = {
       provide: APP_INITIALIZER,
       useFactory: initializeTransloco,
       multi: true
-    }
+    },
+    provideHotToastConfig()
   ]
 };
