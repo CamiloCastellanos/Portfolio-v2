@@ -11,7 +11,7 @@
   "navbar": {
     "home": "Home",
     "about": "About Me",
-    "resume": "Resume",
+    "resume": "Working Experience",
     "certificate": "certificates",
     "project": "Projects"
   },
@@ -24,13 +24,16 @@
     "textScroll": "Scroll to explore"
   },
   "about": {
-    "title": "Acerca de Mí",
-    "text1": "<strong class='text-[var(--text-primary)]'>¡👋🏻 Hola! Soy Camilo Castellanos, Desarrollador Full Stack</strong>apasionado por la creación de soluciones digitales con impacto.",
-    "text2": "Me especializo en construir interfaces modernas en el frontend y soluciones robustas en el backend, enfocándome en crear aplicaciones escalables, eficientes y alineadas con las necesidades del negocio.",
-    "text3": "Cuando no estoy escribiendo código, me encontrarás:",
+    "title": "About Me",
+    "text1": "<strong class='text-[var(--text-primary)]'>👋🏻 Hello! I'm Camilo Castellanos, Full-Stack Developer </strong> passionate about creating impactful digital solutions.",
+    "text2": "I specialize in building modern frontend interfaces and robust backend solutions, focusing on creating scalable, efficient applications aligned with business needs.",
+    "text3": "When I'm not writing code, you'll find me:",
     "listActivities": "<li> 🐾 <strong class='text-[var(--text-primary)]'>Taking care of my pets</strong> (Skay, Lilo, Appa y Maracuyá)</li><li>🎮 <strong class='text-[var(--text-primary)]'>Playing video games</strong> (Up for a match?)</li><li>🃏 <strong class='text-[var(--text-primary)]'>Board games</strong> (Catan never fails)</li><li> 🌱 <strong class='text-[var(--text-primary)]'>Constantly learning</strong>  (whether it's new tech, languages, or board game rules)</li>",
     "frontend": "Development of modern, responsive interfaces focused on user experience.",
     "backend": "I build robust, secure, and scalable APIs to support modern applications.",
     "quote": "“Behind every line of code lies an opportunity to solve real-world problems.”"
+  },
+  "resume": {
+    "title": "Working Experience"
   }
 }
