@@ -2,7 +2,7 @@ import { Component, HostListener } from '@angular/core';
 import { CommonModule } from '@angular/common';
 // ng-icons
 import { NgIcon, provideIcons } from '@ng-icons/core';
-import { heroBriefcase, heroDocument, heroHome, heroMoon, heroSun, heroUser } from '@ng-icons/heroicons/outline';
+import { heroAcademicCap, heroBriefcase, heroClipboard, heroHome, heroMoon, heroSun, heroUser } from '@ng-icons/heroicons/outline';
 // Transloco
 import { TranslocoPipe } from '@ngneat/transloco';
 //
@@ -12,19 +12,20 @@ import { TranslationButton } from '../translation-button/translation-button';
 
 @Component({
   selector: 'navbar',
-  imports: [CommonModule, NgIcon, TranslationButton,TranslocoPipe],
+  imports: [CommonModule, NgIcon, TranslationButton, TranslocoPipe],
   templateUrl: './navbar.html',
   styleUrl: './navbar.css',
   viewProviders: [provideIcons({
-    heroSun, heroMoon, heroHome, heroUser, heroDocument, heroBriefcase
+    heroSun, heroMoon, heroHome, heroUser, heroBriefcase, heroAcademicCap, heroClipboard
   })]
 })
 export class Navbar {
   navItems = [
     { id: 'home', label: 'navbar.home', icon: 'heroHome' },
     { id: 'about-me', label: 'navbar.about', icon: 'heroUser' },
-    { id: 'resume', label: 'navbar.resume', icon: 'heroDocument' },
-    { id: 'projects', label: 'navbar.project', icon: 'heroBriefcase' }
+    { id: 'resume', label: 'navbar.resume', icon: 'heroBriefcase' },
+    { id: 'projects', label: 'navbar.project', icon: 'heroClipboard' },
+    { id: 'certificates', label: 'navbar.certificate', icon: 'heroAcademicCap' }
   ];
   activeSection = 'home';
   isScrolled = false;
