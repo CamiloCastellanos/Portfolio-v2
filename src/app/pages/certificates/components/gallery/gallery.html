@@ -1,0 +1,43 @@
+<!-- GRID -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-5">
+  @for (cert of certificateList; track $index) {
+    <div
+      class="group rounded-xl overflow-hidden border border-[var(--border)] bg-[var(--bg-card)] hover:shadow-lg transition-all duration-300 hover:-translate-y-1 cursor-pointer"
+      (click)="selectedCert = cert"
+      onclick="cert_modal.showModal()"
+    >
+      <div class="relative overflow-hidden">
+        <img
+          [src]="cert.image"
+          [alt]="cert.title"
+          class="w-full h-40 object-cover transition-transform duration-500 group-hover:scale-105"
+        />
+        <div class="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition"></div>
+      </div>
+
+      <div class="p-4">
+        <h4 class="text-sm font-semibold text-[var(--text-primary)] line-clamp-2">
+          {{ cert.title }}
+        </h4>
+      </div>
+    </div>
+  }
+</div>
+
+<dialog id="cert_modal" class="modal">
+  <div class="modal-box max-w-5xl p-0 bg-transparent shadow-none">
+    <img
+      [src]="selectedCert?.image"
+      [alt]="selectedCert?.title"
+      class="w-full h-auto max-h-[80vh] object-contain rounded-xl"
+    />
+    <div class="mt-3 text-center">
+      <p class="text-sm text-[var(--text-secondary)]">
+        {{ selectedCert?.title }}
+      </p>
+    </div>
+  </div>
+  <form method="dialog" class="modal-backdrop">
+    <button></button>
+  </form>
+</dialog>
