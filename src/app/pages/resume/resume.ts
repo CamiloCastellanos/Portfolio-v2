@@ -16,7 +16,7 @@ import { ToolsLanguages } from '../../shared/components/tools-languages/tools-la
 export class Resume {
   workList = signal<Work[]>([]);
 
-  constructor(private firestore: Firestore) {
+  constructor(private readonly firestore: Firestore) {
     this.getWork();
   }
 
