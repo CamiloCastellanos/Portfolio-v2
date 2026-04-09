@@ -1,7 +1,9 @@
-import { Component } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 // Transloco
 import { TranslocoPipe } from '@ngneat/transloco';
+import { ToolsLanguageservice } from '../../services/tools-languageservice';
+import { ToolLanguage } from '../../../models/toolLanguage';
 
 @Component({
   selector: 'tools-languages',
@@ -9,36 +11,14 @@ import { TranslocoPipe } from '@ngneat/transloco';
   templateUrl: './tools-languages.html',
   styleUrl: './tools-languages.css',
 })
-export class ToolsLanguages {
+export class ToolsLanguages implements OnInit {
+  @Input() stateDefault: number = -1;
+  @Input() state: number = -1;
+  @Input() aditionalText: string = "";
+  toolList: ToolLanguage[] = [];
+  constructor(private readonly toolsLanguageservice: ToolsLanguageservice) { }
 
-  // tools = {
-  //   languages: [
-  //     { name: 'TypeScript', icon: 'assets/icons/typescript.svg' },
-  //     { name: 'JavaScript', icon: 'assets/icons/javascript.svg' }
-  //   ],
-  //   frameworks: [
-  //     { name: 'Angular', icon: 'assets/icons/angular.svg' },
-  //     { name: '.NET', icon: 'assets/icons/dotnet.svg' }
-  //   ],
-  //   tools: [
-  //     { name: 'Git', icon: 'assets/icons/git.svg' },
-  //     { name: 'Docker', icon: 'assets/icons/docker.svg' }
-  //   ]
-  // }
-
-  tools = [
-    { name: 'Git', icon: 'https://i.postimg.cc/FszYnfHX/GitHub.webp' },
-    { name: 'Docker', icon: 'https://i.postimg.cc/hvVnLNh8/angular.webp' },
-    { name: 'Docker', icon: 'https://i.postimg.cc/hvVnLNh8/angular.webp' },
-    { name: 'Docker', icon: 'https://i.postimg.cc/hvVnLNh8/angular.webp' },
-    { name: 'Docker', icon: 'https://i.postimg.cc/hvVnLNh8/angular.webp' },
-    { name: 'Docker', icon: 'https://i.postimg.cc/hvVnLNh8/angular.webp' },
-    { name: 'Docker', icon: 'https://i.postimg.cc/hvVnLNh8/angular.webp' },
-    { name: 'Docker', icon: 'https://i.postimg.cc/hvVnLNh8/angular.webp' },
-    { name: 'Docker', icon: 'https://i.postimg.cc/hvVnLNh8/angular.webp' },
-    { name: 'Docker', icon: 'https://i.postimg.cc/hvVnLNh8/angular.webp' },
-    { name: 'Docker', icon: 'https://i.postimg.cc/hvVnLNh8/angular.webp' },
-    { name: 'Docker', icon: 'https://i.postimg.cc/hvVnLNh8/angular.webp' },
-
-  ]
+  ngOnInit(): void {
+    this.toolList = this.toolsLanguageservice.getListFilter(this.state, this.stateDefault);
+  }
 }
