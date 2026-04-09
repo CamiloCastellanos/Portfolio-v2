@@ -3,21 +3,20 @@
 
 /* ── LIGHT MODE (default) ───────────────────── */
 :root {
-  /* Backgrounds */
   --bg-base: #f5f4f0;
   --bg-card: #ffffff;
   --bg-sidebar: #eeecea;
-  --bg-hover: #eceae6; /* Borders */
+  --bg-hover: #eceae6;
   --border: #e2e0d8;
-  --border-strong: #c8c5bc; /* Typography */
+  --border-strong: #c8c5bc;
   --text-primary: #1a1917;
   --text-secondary: #5c5a56;
-  --text-muted: #9b9891; /* Acento */
-  --accent-subtle: #eef2ff;
-  --accent-border: #c7d2fe;
-  --accent: #4f46e5;
-  --accent-hover: #4338ca;
-  --accent-text: #312e81; /* Transición suave */
+  --text-muted: #9b9891;
+  --accent-subtle: #ecfdf5;
+  --accent-border: #a7f3d0;
+  --accent: #10b981;
+  --accent-hover: #059669;
+  --accent-text: #065f46;
   --transition: background 0.25s ease, color 0.2s ease, border-color 0.2s ease;
 }
 
@@ -32,13 +31,12 @@
   --text-primary: #f0eee8;
   --text-secondary: #9896a0;
   --text-muted: #5c5a68;
-  --accent-subtle: #1e1b35;
-  --accent-border: #3d3870;
-  --accent: #7c6fe0;
-  --accent-hover: #6b5fd0;
-  --accent-text: #a89cf5;
-} /* ── APLICAR A TODOS LOS ELEMENTOS ─────────── */
-
+  --accent-subtle: #052e2b;
+  --accent-border: #065f46;
+  --accent: #34d399;
+  --accent-hover: #10b981;
+  --accent-text: #6ee7b7;
+}
 html {
   background: var(--bg-base);
 }
@@ -57,5 +55,21 @@ body {
   .profile-and-navbar-fixed {
     position: fixed;
     top: 3rem;
+  }
+}
+
+.heart {
+  animation: heartbeat 2.2s ease-in-out infinite;
+}
+
+@keyframes heartbeat {
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 0.7;
+  }
+  50% {
+    transform: scale(1.6);
+    opacity: 1;
   }
 }
