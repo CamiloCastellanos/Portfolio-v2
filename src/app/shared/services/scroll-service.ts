@@ -6,22 +6,26 @@ import { BehaviorSubject } from 'rxjs';
 })
 export class ScrollService {
 
-  private currentSection = new BehaviorSubject<string>('home');
-  currentSection$ = this.currentSection.asObservable();
-
+  private readonly currentSection = new BehaviorSubject<string>('home');
+  private readonly isMobile = window.innerWidth < 768;
   private observer!: IntersectionObserver;
+  currentSection$ = this.currentSection.asObservable();
 
   scrollTo(sectionId: string) {
     const element = document.getElementById(sectionId);
     if (!element) return;
 
-    const yOffset = sectionId == 'home' ? -40 : -80; // altura navbar
-    const y = element.getBoundingClientRect().top + window.scrollY + yOffset;
-
-    window.scrollTo({
-      top: y,
-      behavior: 'smooth'
-    });
+    if (this.isMobile) {
+      window.scrollTo({
+        top: element.offsetTop,
+        behavior: 'smooth'
+      });
+    } else {
+      element.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      });
+    }
 
     this.currentSection.next(sectionId);
   }
@@ -41,18 +45,32 @@ export class ScrollService {
   private createObserver() {
     this.observer = new IntersectionObserver(
       (entries) => {
-        const visibleSections = entries
-          .filter(entry => entry.isIntersecting)
-          .sort((a, b) => b.intersectionRatio - a.intersectionRatio);
+        let closestSection: IntersectionObserverEntry | null = null;
+        let minDistance = Infinity;
 
-        if (visibleSections.length > 0) {
-          const current = visibleSections[0].target.id;
-          this.currentSection.next(current);
-        }
+        const viewportCenter = window.innerHeight / 2;
+
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) return;
+
+          const rect = entry.boundingClientRect;
+          const sectionCenter = rect.top + rect.height / 2;
+
+          const distance = Math.abs(viewportCenter - sectionCenter);
+
+          if (distance < minDistance) {
+            minDistance = distance;
+            closestSection = entry;
+          }
+
+          if (closestSection != null) {
+            this.currentSection.next(closestSection.target.id);
+          }
+        });
       },
       {
         root: null,
-        threshold: [0.3, 0.6, 0.9],
+        threshold: 0.1,
       }
     );
   }
