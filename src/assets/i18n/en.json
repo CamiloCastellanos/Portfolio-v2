@@ -12,7 +12,7 @@
     "home": "Home",
     "about": "About Me",
     "resume": "Working Experience",
-    "certificate": "certificates",
+    "certificate": "Certificates",
     "project": "Projects"
   },
   "home": {
@@ -34,9 +34,23 @@
     "quote": "“Behind every line of code lies an opportunity to solve real-world problems.”"
   },
   "resume": {
-    "title": "Working Experience"
+    "title": "Working Experience",
+    "textTools": "Some of the technologies and tools I have used at work and on various professional projects."
   },
   "tools&languages": {
     "title": "Tools & Languages"
+  },
+  "projects": {
+    "title": "Projects",
+    "cardTech": "TMain technology",
+    "btnCode": "View code",
+    "btnDemo": "View demo",
+    "textTools": "Technologies, languages ​​and tools that I have explored and studied independently, applying them in personal projects to strengthen and expand my knowledge and skills."
+  },
+  "certificate": {
+    "title": "Certificates"
+  },
+  "footer": {
+    "text": "Made with <span class='text-red-500 heart'>❤</span> by<span class='font-medium text-[var(--text-primary)]'> Camilo Castellanos</span>, 2026s"
   }
 }

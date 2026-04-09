@@ -34,9 +34,23 @@
     "quote": "“Detrás de cada línea de código hay una oportunidad para resolver problemas reales.”"
   },
   "resume": {
-    "title": "Experiencia Laboral"
+    "title": "Experiencia Laboral",
+    "textTools": "Algunas de las tecnologías y herramientas que he utilizado en el trabajo y en distintos proyectos profesionales."
   },
   "tools&languages": {
     "title": "Herramientas & Tecnologías"
+  },
+  "projects": {
+    "title": "Proyectos",
+    "cardTech": "Tecnología principal",
+    "btnCode": "Ver código",
+    "btnDemo": "Ver demo",
+    "textTools": "Tecnologías, lenguajes y herramientas que he explorado y estudiado de forma autónoma, aplicándolas en proyectos personales para fortalecer y ampliar mis conocimientos y habilidades."
+  },
+  "certificate": {
+    "title": "Certificados"
+  },
+  "footer": {
+    "text": "Creado con <span class='text-red-500 heart'>❤</span> by<span class='font-medium text-[var(--text-primary)]'> por Camilo Castellanos</span>, 2026"
   }
 }

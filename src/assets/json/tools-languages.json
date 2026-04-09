@@ -1,0 +1,99 @@
+{
+  "tools": [
+    {
+      "name": ".NET",
+      "image": "https://i.postimg.cc/ZYrHKM85/net.webp",
+      "state": 2
+    },
+    {
+      "name": "C#",
+      "image": "https://i.postimg.cc/s27Q9tDB/CSharp.webp",
+      "state": 2
+    },
+    {
+      "name": ".NET Core",
+      "image": "https://i.postimg.cc/13Z5nPTq/net-core.webp",
+      "state": 2
+    },
+    {
+      "name": "Github",
+      "image": "https://i.postimg.cc/FszYnfHX/GitHub.webp",
+      "state": 2
+    },
+    {
+      "name": "Angular",
+      "image": "https://i.postimg.cc/hvVnLNh8/angular.webp",
+      "state": 2
+    },
+    {
+      "name": "SQL Server",
+      "image": "https://i.postimg.cc/tgLxPF0z/SQLServer.webp",
+      "state": 2
+    },
+    {
+      "name": "Visual Studio",
+      "image": "https://i.postimg.cc/qqgHT6R9/Visual-Studio.webp",
+      "state": 2
+    },
+    {
+      "name": "Visual Studio Code",
+      "image": "https://i.postimg.cc/nLcJkWxF/Visual-Studio-Code.webp",
+      "state": 2
+    },
+    {
+      "name": "Power BI",
+      "image": "https://i.postimg.cc/xTLZ2fRx/PowerBi.webp",
+      "state": 2
+    },
+    {
+      "name": "Oracle SQL",
+      "image": "https://i.postimg.cc/x1Fy4D2t/Oracle-SQL.webp",
+      "state": 0
+    },
+    {
+      "name": "Ionic",
+      "image": "https://i.postimg.cc/X7PrMVrG/ionic.webp",
+      "state": 1
+    },
+    {
+      "name": "Python",
+      "image": "https://i.postimg.cc/vmd1Zb5P/python.webp",
+      "state": 1
+    },
+    {
+      "name": "Colab",
+      "image": "https://i.postimg.cc/X7Y5SHxh/colab.webp",
+      "state": 1
+    },
+    {
+      "name": "MongoDB",
+      "image": "https://i.postimg.cc/7hWZyVZ8/mongo.webp",
+      "state": 1
+    },
+    {
+      "name": "Node JS",
+      "image": "https://i.postimg.cc/Nj0kDGWK/nodejs.webp",
+      "state": 1
+    },
+    {
+      "name": "Bulma CSS",
+      "image": "https://i.postimg.cc/2SJhxQQt/bulmacss.webp",
+      "state": 1
+    },
+    {
+      "name": "Postman",
+      "image": "https://i.postimg.cc/WbkbFxNx/Postman.webp",
+      "state": 2
+    },
+    {
+      "name": "Firebase",
+      "image": "https://i.postimg.cc/T2Cy9jGc/firebase.webp",
+      "state": 1
+    },
+    {
+      "name": "JQuery",
+      "image": "https://i.postimg.cc/T1vBJqT0/JQuery.webp",
+      "state": 0
+    }
+  ]
+}

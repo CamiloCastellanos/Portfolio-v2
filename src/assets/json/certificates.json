@@ -1,0 +1,44 @@
+{
+  "certificates": [
+    {
+      "title": "Angular: De cero a experto (Legacy)",
+      "image": "https://i.postimg.cc/D0JH90H1/Certificado-angular.webp"
+    },
+    {
+      "title": "Angular: Pruebas unitarias con Jasmine y Karma",
+      "image": "https://i.postimg.cc/8zXmHKSN/Angular-Pruebas-Unitarias-Jasmine-Karma.webp"
+    },
+    {
+      "title": "Angular: Pruebas unitarias con Jest",
+      "image": "https://i.postimg.cc/NjjxRhZd/Angular-Pruebas-Unitarias-Jest.webp"
+    },
+    {
+      "title": "Curso de ASP.NET Core",
+      "image": "https://i.postimg.cc/HkhZgd02/Diploma-aspnet-core.webp"
+    },
+    {
+      "title": "Curso de MongoDB Aprende bases de datos NoSQL + API NodeJS",
+      "image": "https://i.postimg.cc/d19hgrCw/Curso-Mongo.webp"
+    },
+    {
+      "title": "Matemáticas Aplicadas a la Ciencia de Datos",
+      "image": "https://i.postimg.cc/PqW6XbDD/Matem-ticas-Aplicadas-a-la-Ciencia-de-Datos-pages-to-jpg-0001.webp"
+    },
+    {
+      "title": "Fundamentos de Typescript",
+      "image": "https://i.postimg.cc/D0ySh0Qs/diploma-fundamentos-typescript.webp"
+    },
+    {
+      "title": "Curso Profesional de Git y GitHub",
+      "image": "https://i.postimg.cc/Mp5MsgCX/diploma-git-github.webp"
+    },
+    {
+      "title": "Markdown Desde Cero",
+      "image": "https://i.postimg.cc/dVzZCqvP/certificado-curso-markdown.webp"
+    },
+    {
+      "title": "Aprende Typescript",
+      "image": "https://i.postimg.cc/s2hSHMKg/Aprende-Type-Script.webp"
+    }
+  ]
+}
