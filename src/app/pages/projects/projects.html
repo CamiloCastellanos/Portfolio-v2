@@ -1,0 +1,14 @@
+<div class="space-y-10 sm:space-y-12 lg:space-y-16">
+  <div class="relative pb-4 sm:pb-5">
+    <h2 class="text-2xl sm:text-3xl font-semibold text-[var(--text-primary)] tracking-tight">
+      {{ 'projects.title' | transloco }}
+    </h2>
+    <div class="absolute -bottom-2 left-0 w-12 h-0.5 bg-[var(--accent)] rounded-full"></div>
+  </div>
+
+  <card [projectList]="projectList" class="relative pb-4 sm:pb-5"></card>
+
+  <div class="pt-8 sm:pt-8">
+    <tools-languages [stateDefault]="2" [state]="1" [aditionalText]="'projects.textTools'"></tools-languages>
+  </div>
+</div>
