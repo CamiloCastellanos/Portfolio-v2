@@ -1,14 +1,21 @@
 <div class="space-y-10 sm:space-y-12 lg:space-y-16">
-  <div class="relative pb-4 sm:pb-5">
+  <div class="relative pb-4 sm:pb-5" data-anim="projects-title">
     <h2 class="text-2xl sm:text-3xl font-semibold text-[var(--text-primary)] tracking-tight">
       {{ 'projects.title' | transloco }}
     </h2>
-    <div class="absolute -bottom-2 left-0 w-12 h-0.5 bg-[var(--accent)] rounded-full"></div>
+    <div
+      class="absolute -bottom-2 left-0 w-12 h-0.5 bg-[var(--accent)] rounded-full"
+      data-anim="projects-title-line"
+    ></div>
   </div>
 
   <card [projectList]="projectList" class="relative pb-4 sm:pb-5"></card>
 
-  <div class="pt-8 sm:pt-8">
-    <tools-languages [stateDefault]="2" [state]="1" [aditionalText]="'projects.textTools'"></tools-languages>
+  <div class="pt-8 sm:pt-8" data-anim="tools-section">
+    <tools-languages
+      [stateDefault]="2"
+      [state]="1"
+      [aditionalText]="'projects.textTools'"
+    ></tools-languages>
   </div>
 </div>
