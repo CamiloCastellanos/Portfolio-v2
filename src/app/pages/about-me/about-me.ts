@@ -4,9 +4,9 @@ import { TranslocoPipe } from '@ngneat/transloco';
 //GSAP
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+gsap.registerPlugin(ScrollTrigger);
 //
 import { Profile } from '../../shared/components/profile/profile';
-gsap.registerPlugin(ScrollTrigger);
 
 @Component({
   selector: 'about-me',
@@ -34,7 +34,7 @@ export class AboutMe implements OnInit, OnDestroy {
           trigger: 'about-me',   // el componente host
           start: 'top 80%',      // entra cuando el top del bloque llega al 80% del viewport
           end: 'top 20%',        // sale cuando el top supera el 20% (scroll hacia arriba)
-          toggleActions: 'play none none none',
+          toggleActions: 'play none none reset',
         },
       });
 

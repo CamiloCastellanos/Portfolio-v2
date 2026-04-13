@@ -1,14 +1,17 @@
 <div class="space-y-8 sm:space-y-10 lg:space-y-12">
-  <div class="relative">
+  <div class="relative" data-anim="resume-title">
     <h2 class="text-2xl sm:text-3xl font-semibold text-[var(--text-primary)] tracking-tight">
       {{ 'resume.title' | transloco }}
     </h2>
-    <div class="absolute -bottom-3 left-0 w-12 h-0.5 bg-[var(--accent)] rounded-full"></div>
+    <div
+      class="absolute -bottom-3 left-0 w-12 h-0.5 bg-[var(--accent)] rounded-full"
+      data-anim="resume-title-line"
+    ></div>
   </div>
 
   <resume-time-line [workList]="workList"></resume-time-line>
 
-  <div class="pt-4 sm:pt-6">
+  <div class="pt-4 sm:pt-6" data-anim="tools-section">
     <tools-languages [stateDefault]="2" [state]="0" [aditionalText]="'resume.textTools'"></tools-languages>
   </div>
 </div>

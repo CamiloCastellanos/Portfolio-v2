@@ -1,7 +1,10 @@
 <div class="container">
   <ul>
     @for (work of sortedWorkList(); track work) {
-      <li [style.--icon-circle]="'url(' + work.icon + ')'">
+      <li
+        [style.--icon-circle]="'url(' + work.icon + ')'"
+        data-anim="timeline-item"
+      >
         <h1 class="title typography-lora">
           {{ work.title }}
         </h1>
