@@ -1,15 +1,23 @@
-<span class="text-xl text-[var(--text-muted)] mb-2"> 👋 {{ 'home.greeting' | transloco }}</span>
-<h1 class="text-4xl md:text-5xl font-semibold text-[var(--text-primary)] leading-tight">
+<span class="text-xl text-[var(--text-muted)] mb-2" data-anim="home-greeting">
+  👋 {{ 'home.greeting' | transloco }}
+</span>
+
+<h1
+  class="text-4xl md:text-5xl font-semibold text-[var(--text-primary)] leading-tight"
+  data-anim="home-name"
+>
   Camilo Castellanos
   <br />
-  <span class="text-[var(--accent)]"> {{ 'home.position' | transloco }} </span>
+  <span class="text-[var(--accent)]" data-anim="home-position">
+    {{ 'home.position' | transloco }}
+  </span>
 </h1>
 
-<p class="mt-4 text-base md:text-lg text-[var(--text-secondary)] max-w-lg">
+<p class="mt-4 text-base md:text-lg text-[var(--text-secondary)] max-w-lg" data-anim="home-text">
   {{ 'home.text' | transloco }}
 </p>
 
-<div class="flex items-center gap-3 mt-6">
+<div class="flex items-center gap-3 mt-6" data-anim="home-buttons">
   <button
     class="px-2.5 py-2.5 rounded-xl bg-[var(--accent)] text-white text-sm font-medium hover:bg-[var(--accent-hover)] transition-all duration-200 flex items-center"
     (click)="scrollToProjects()"
@@ -27,4 +35,4 @@
   </a>
 </div>
 
-<call-to-scroll class="flex flex-col items-center"></call-to-scroll>
+<call-to-scroll class="flex flex-col items-center" data-anim="home-cta"></call-to-scroll>
