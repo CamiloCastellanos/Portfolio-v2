@@ -1,8 +1,9 @@
 <div
   class="profile-and-navbar-fixed rounded-2xl sm:rounded-3xl border border-[var(--border)] bg-[var(--bg-card)] shadow-sm p-5 sm:p-6 md:p-8 flex flex-col justify-between transition-all duration-300 hover:shadow-md"
+  data-anim="profile-card"
 >
-  <!-- Avatar - Sección -->
-  <div class="flex flex-col items-center text-center">
+  <!-- Avatar -->
+  <div class="flex flex-col items-center text-center" data-anim="profile-avatar">
     <div
       class="w-60 h-60 sm:w-40 sm:h-40 md:w-48 md:h-48 lg:w-56 lg:h-56 xl:w-64 xl:h-64 rounded-full overflow-hidden border-4 border-[var(--border)] shadow-sm transition-all duration-300 hover:scale-[1.02] hover:border-[var(--accent-border)]"
     >
@@ -16,107 +17,70 @@
     <h1 class="mt-4 sm:mt-5 text-xl sm:text-2xl font-semibold text-[var(--text-primary)]">
       Juan Camilo Castellanos
     </h1>
-
     <p class="text-xs sm:text-sm text-[var(--accent)] font-medium mt-1">
       {{ 'profile.position' | transloco }}
     </p>
-
     <p class="text-xs sm:text-sm text-[var(--text-secondary)] mt-2 max-w-xs px-2">
       {{ 'profile.quote' | transloco }}
     </p>
   </div>
 
-  <!-- Información de contacto -->
-  <div
-    class="flex flex-col gap-2 sm:gap-2.5 mt-5 sm:mt-6 text-xs sm:text-sm text-[var(--text-secondary)]"
-  >
-    <div class="flex items-center gap-2 sm:gap-2.5">
-      <span class="text-base sm:text-lg">📍</span>
-      <span>Bogotá, Colombia</span>
+  <!-- Info de contacto + Formación -->
+  <div data-anim="profile-info">
+    <div class="flex flex-col gap-2 sm:gap-2.5 mt-5 sm:mt-6 text-xs sm:text-sm text-[var(--text-secondary)]">
+      <div class="flex items-center gap-2 sm:gap-2.5">
+        <span class="text-base sm:text-lg">📍</span>
+        <span>Bogotá, Colombia</span>
+      </div>
+      <div class="flex items-center gap-2 sm:gap-2.5">
+        <span class="text-base sm:text-lg">💼</span>
+        <span>{{ 'profile.experience' | transloco }}</span>
+      </div>
+      <div class="flex items-center gap-2 sm:gap-2.5">
+        <span class="text-base sm:text-lg">🎓</span>
+        <span>{{ 'profile.career' | transloco }}</span>
+      </div>
     </div>
 
-    <div class="flex items-center gap-2 sm:gap-2.5">
-      <span class="text-base sm:text-lg">💼</span>
-      <span> {{ 'profile.experience' | transloco }} </span>
-    </div>
-
-    <div class="flex items-center gap-2 sm:gap-2.5">
-      <span class="text-base sm:text-lg">🎓</span>
-      <span>{{ 'profile.career' | transloco }} </span>
-    </div>
-  </div>
-
-  <!-- Formación -->
-  <div class="mt-5 sm:mt-6">
-    <h3
-      class="text-[10px] sm:text-xs uppercase tracking-wider text-[var(--text-muted)] font-semibold mb-2 sm:mb-3"
-    >
-      {{ 'profile.titleTraining' | transloco }}
-    </h3>
-
-    <div class="flex flex-col gap-1 text-xs sm:text-sm text-[var(--text-primary)]">
-      <span>🎓 {{ 'profile.training1' | transloco }}</span>
-      <span>🎓 {{ 'profile.training2' | transloco }}</span>
+    <div class="mt-5 sm:mt-6">
+      <h3 class="text-[10px] sm:text-xs uppercase tracking-wider text-[var(--text-muted)] font-semibold mb-2 sm:mb-3">
+        {{ 'profile.titleTraining' | transloco }}
+      </h3>
+      <div class="flex flex-col gap-1 text-xs sm:text-sm text-[var(--text-primary)]">
+        <span>🎓 {{ 'profile.training1' | transloco }}</span>
+        <span>🎓 {{ 'profile.training2' | transloco }}</span>
+      </div>
     </div>
   </div>
 
-  <!-- Redes sociales y acciones -->
+  <!-- Redes sociales -->
   <div
     class="flex justify-center gap-2 sm:gap-3 md:gap-4 mt-6 sm:mt-7 pt-4 sm:pt-5 border-t border-[var(--border)]"
+    data-anim="profile-social"
   >
-    <a
-      [href]="urlGit"
-      target="_blank"
+    <a [href]="urlGit" target="_blank"
       class="group p-1.5 sm:p-2 rounded-full transition-all duration-300 hover:scale-110 active:scale-95"
-      [attr.aria-label]="'GitHub'"
-    >
-      <ng-icon
-        name="bootstrapGithub"
-        [size]="sizeIcon"
-        [color]="colorIcon"
-        class="transition-all duration-300 text-[var(--text-secondary)] group-hover:text-[var(--accent)] sm:group-hover:rotate-6"
-      />
+      [attr.aria-label]="'GitHub'">
+      <ng-icon name="bootstrapGithub" [size]="sizeIcon" [color]="colorIcon"
+        class="transition-all duration-300 text-[var(--text-secondary)] group-hover:text-[var(--accent)] sm:group-hover:rotate-6"/>
     </a>
-
-    <a
-      [href]="urlLinkedin"
-      target="_blank"
+    <a [href]="urlLinkedin" target="_blank"
       class="group p-1.5 sm:p-2 rounded-full transition-all duration-300 hover:scale-110 active:scale-95"
-      [attr.aria-label]="'LinkedIn'"
-    >
-      <ng-icon
-        name="bootstrapLinkedin"
-        [size]="sizeIcon"
-        [color]="colorIcon"
-        class="transition-all duration-300 text-[var(--text-secondary)] group-hover:text-[var(--accent)] sm:group-hover:rotate-6"
-      />
+      [attr.aria-label]="'LinkedIn'">
+      <ng-icon name="bootstrapLinkedin" [size]="sizeIcon" [color]="colorIcon"
+        class="transition-all duration-300 text-[var(--text-secondary)] group-hover:text-[var(--accent)] sm:group-hover:rotate-6"/>
     </a>
-
-    <button
-      (click)="copyMail()"
+    <button (click)="copyMail()"
       class="group p-1.5 sm:p-2 rounded-full transition-all duration-300 hover:scale-110 active:scale-95"
-      [attr.aria-label]="'Copiar correo electrónico'"
-    >
-      <ng-icon
-        name="ionMail"
-        [size]="sizeIcon"
-        [color]="colorIcon"
-        class="transition-all duration-300 text-[var(--text-secondary)] group-hover:text-[var(--accent)] sm:group-hover:rotate-6"
-      />
+      [attr.aria-label]="'Copiar correo electrónico'">
+      <ng-icon name="ionMail" [size]="sizeIcon" [color]="colorIcon"
+        class="transition-all duration-300 text-[var(--text-secondary)] group-hover:text-[var(--accent)] sm:group-hover:rotate-6"/>
     </button>
-
-    <a
-      [href]="urlCV"
-      target="_blank"
+    <a [href]="urlCV" target="_blank"
       class="group p-1.5 sm:p-2 rounded-full transition-all duration-300 hover:scale-110 active:scale-95"
-      [attr.aria-label]="'Descargar CV'"
-    >
-      <ng-icon
-        name="heroDocumentArrowDownSolid"
-        [size]="sizeIcon"
-        [color]="colorIcon"
-        class="transition-all duration-300 text-[var(--text-secondary)] group-hover:text-[var(--accent)] sm:group-hover:rotate-6"
-      />
+      [attr.aria-label]="'Descargar CV'">
+      <ng-icon name="heroDocumentArrowDownSolid" [size]="sizeIcon" [color]="colorIcon"
+        class="transition-all duration-300 text-[var(--text-secondary)] group-hover:text-[var(--accent)] sm:group-hover:rotate-6"/>
     </a>
   </div>
 </div>

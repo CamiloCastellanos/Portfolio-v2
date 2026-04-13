@@ -63,7 +63,6 @@ export class Navbar implements AfterViewInit, OnDestroy {
         y: 0,
         duration: 0.6,
         ease: 'power3.out',
-        // Sincronizado con el hero — entra cuando el greeting ya está visible
         delay: 0.45,
         clearProps: 'transform,opacity',
       });
