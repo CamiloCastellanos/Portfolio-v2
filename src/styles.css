@@ -37,6 +37,7 @@
   --accent-hover: #10b981;
   --accent-text: #6ee7b7;
 }
+
 html {
   background: var(--bg-base);
 }
