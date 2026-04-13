@@ -9,7 +9,7 @@ import { Card } from './components/card/card';
 
 @Component({
   selector: 'projects',
-  imports: [TranslocoPipe, ToolsLanguages,Card],
+  imports: [TranslocoPipe, ToolsLanguages, Card],
   templateUrl: './projects.html',
   styleUrl: './projects.css',
 })
@@ -17,14 +17,13 @@ export class Projects {
 
   projectList = signal<Project[]>([]);
 
-  constructor(private firestore: Firestore) {
+  constructor(private readonly firestore: Firestore) {
     this.getProject();
   }
 
   private getProject() {
     collectionData(collection(this.firestore, "proyectos")).subscribe((data: any) => {
       this.projectList.set(data);
-      console.log(data)
     });
   }
 }
