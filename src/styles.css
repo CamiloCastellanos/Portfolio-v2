@@ -1,5 +1,6 @@
 @import 'tailwindcss';
 @plugin "daisyui";
+@import 'glightbox/dist/css/glightbox.css';
 
 /* ── LIGHT MODE (default) ───────────────────── */
 :root {
