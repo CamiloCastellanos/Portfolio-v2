@@ -4,6 +4,21 @@
 
 ---
 
+## 🚀 Live Demo
+
+> 🔗 *[DevCastellanos.com]([https://devcastellanos.com/])*
+
+---
+
+## 📸 Preview
+
+> ![Portfolio Desktop](https://github.com/CamiloCastellanos/Portfolio-v2/blob/main/src/assets/image/git/desktop-cover.png)
+
+> ![Portfolio Mobile](https://github.com/CamiloCastellanos/Portfolio-v2/blob/main/src/assets/image/git/mobile-cover.png)
+
+
+---
+
 ## 👨‍💻 About
 
 This is my personal portfolio, designed to showcase my experience, technical skills, and projects as a Frontend Developer.
@@ -117,19 +132,6 @@ src/
 * Scalable component design
 
 > 🇪🇸 *Arquitectura modular en Angular, programación reactiva, soporte para múltiples idiomas, animaciones avanzadas y diseño escalable.*
-
----
-
-## 🚀 Live Demo
-
-> 🔗 *()*
-
----
-
-## 📸 Preview
-
-> *()*
-
 
 ---
 
