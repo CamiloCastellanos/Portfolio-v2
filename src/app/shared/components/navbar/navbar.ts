@@ -1,4 +1,4 @@
-import { Component, AfterViewInit, OnDestroy, ElementRef } from '@angular/core';
+import { Component, AfterViewInit, OnDestroy, ElementRef, HostListener } from '@angular/core';
 import { CommonModule } from '@angular/common';
 //NgIcon
 import { NgIcon, provideIcons } from '@ng-icons/core';
@@ -65,6 +65,12 @@ export class Navbar implements AfterViewInit, OnDestroy {
     (document as any).startViewTransition(() => {
       this.themeService.toggle();
     });
+  }
+
+
+  @HostListener('window:scroll')
+  onScroll() {
+    // revisa el scroll
   }
 
   private initAnimations(): void {
