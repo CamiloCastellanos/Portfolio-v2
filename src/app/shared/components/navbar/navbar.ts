@@ -2,7 +2,7 @@ import { Component, HostListener, AfterViewInit, OnDestroy, ElementRef } from '@
 import { CommonModule } from '@angular/common';
 //NgIcon
 import { NgIcon, provideIcons } from '@ng-icons/core';
-import { heroAcademicCap, heroBriefcase, heroClipboard, heroHome, heroMoon, heroSun, heroUser } from '@ng-icons/heroicons/outline';
+import { heroAcademicCap, heroBriefcase, heroClipboard, heroEllipsisHorizontal, heroHome, heroMoon, heroSun, heroUser } from '@ng-icons/heroicons/outline';
 //Transloco
 import { TranslocoPipe } from '@ngneat/transloco';
 //GSAP
@@ -18,7 +18,7 @@ import { TranslationButton } from '../translation-button/translation-button';
   templateUrl: './navbar.html',
   styleUrl: './navbar.css',
   viewProviders: [provideIcons({
-    heroSun, heroMoon, heroHome, heroUser, heroBriefcase, heroAcademicCap, heroClipboard
+    heroSun, heroMoon, heroHome, heroUser, heroBriefcase, heroAcademicCap, heroClipboard, heroEllipsisHorizontal,
   })]
 })
 export class Navbar implements AfterViewInit, OnDestroy {
@@ -33,6 +33,7 @@ export class Navbar implements AfterViewInit, OnDestroy {
   isScrolled = false;
   language: string = 'es';
   private ctx!: gsap.Context;
+  isOpen: boolean = false;
 
   constructor(
     readonly themeService: ThemeService,
