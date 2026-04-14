@@ -92,7 +92,15 @@ export class Resume implements OnDestroy {
         },
       });
 
-      tlTools.to('[data-anim="tools-section"]', { opacity: 1, y: 0, duration: 0.75 });
+      tlTools.to('[data-anim="tools-section"]', {
+        opacity: 1,
+        y: 0,
+        duration: 0.75,
+        clearProps: 'transform,opacity',
+        onComplete: () => {
+          ScrollTrigger.refresh();
+        }
+      });
 
     }, this.el.nativeElement);
   }

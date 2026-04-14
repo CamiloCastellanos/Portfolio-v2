@@ -102,6 +102,9 @@ export class Projects implements OnDestroy {
             duration: 0.75,
             ease: 'power3.out',
             clearProps: 'transform,opacity',
+            onComplete: () => {
+              ScrollTrigger.refresh();
+            }
           });
         },
         onLeaveBack: (batch) => {
