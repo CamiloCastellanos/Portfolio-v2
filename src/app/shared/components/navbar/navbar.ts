@@ -1,4 +1,4 @@
-import { Component, HostListener, AfterViewInit, OnDestroy, ElementRef } from '@angular/core';
+import { Component, AfterViewInit, OnDestroy, ElementRef } from '@angular/core';
 import { CommonModule } from '@angular/common';
 //NgIcon
 import { NgIcon, provideIcons } from '@ng-icons/core';
@@ -30,7 +30,6 @@ export class Navbar implements AfterViewInit, OnDestroy {
     { id: 'certificates', label: 'navbar.certificate', icon: 'heroAcademicCap' },
   ];
   activeSection = 'home';
-  isScrolled = false;
   language: string = 'es';
   private ctx!: gsap.Context;
   isOpen: boolean = false;
@@ -47,6 +46,25 @@ export class Navbar implements AfterViewInit, OnDestroy {
 
   ngAfterViewInit(): void {
     requestAnimationFrame(() => this.initAnimations());
+  }
+
+  ngOnDestroy(): void {
+    this.ctx?.revert();
+  }
+
+  goToSection(section: string) {
+    this.scrollService.scrollTo(section);
+  }
+
+  toggle() {
+    if (!(document as any).startViewTransition) {
+      this.themeService.toggle();
+      return;
+    }
+
+    (document as any).startViewTransition(() => {
+      this.themeService.toggle();
+    });
   }
 
   private initAnimations(): void {
@@ -79,22 +97,5 @@ export class Navbar implements AfterViewInit, OnDestroy {
       });
 
     }, this.el.nativeElement);
-  }
-
-  ngOnDestroy(): void {
-    this.ctx?.revert();
-  }
-
-  goToSection(section: string) {
-    this.scrollService.scrollTo(section);
-  }
-
-  toggle() {
-    this.themeService.toggle();
-  }
-
-  @HostListener('window:scroll')
-  onScroll() {
-    this.isScrolled = window.scrollY > 20;
   }
 }

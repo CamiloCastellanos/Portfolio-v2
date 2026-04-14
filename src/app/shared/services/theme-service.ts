@@ -1,17 +1,16 @@
-import { Injectable, signal, computed, effect } from '@angular/core';
+import { Injectable, signal, computed, effect, Inject } from '@angular/core';
 import { DOCUMENT } from '@angular/common';
-import { Inject } from '@angular/core';
 
 @Injectable({ providedIn: 'root' })
 export class ThemeService {
 
   private readonly keyTheme: string = "theme";
-  private _isDark = signal<boolean>(false);
+  private readonly _isDark = signal<boolean>(false);
   isDark = computed(() => this._isDark());
 
-  constructor(@Inject(DOCUMENT) private doc: Document) {
+  constructor(@Inject(DOCUMENT) private readonly doc: Document) {
     const saved = localStorage.getItem(this.keyTheme);
-    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    const prefersDark = globalThis.matchMedia('(prefers-color-scheme: dark)').matches;
     // Prioridad: localStorage > sistema operativo > light
     const startDark = saved === 'dark' || (!saved && prefersDark);
     this._isDark.set(startDark);
