@@ -1,4 +1,4 @@
-import { Component, Input, signal } from '@angular/core';
+import { Component, computed, Input, signal } from '@angular/core';
 import { NgClass } from '@angular/common';
 //Transloco
 import { TranslocoPipe } from '@ngneat/transloco';
@@ -22,6 +22,9 @@ import { ThemeService } from '../../../../shared/services/theme-service';
 export class Card {
   @Input() projectList = signal<Project[]>([]);
   sizeIcon: string = "17";
+  sortedProjectList = computed(() =>
+    [...this.projectList()].sort((a, b) => a.order - b.order)
+  );
 
   constructor(readonly themeService: ThemeService) { }
 }

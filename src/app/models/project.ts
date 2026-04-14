@@ -9,4 +9,6 @@ export class Project {
   image2: string = '';
   url: string = '';
   urlProject: string = '';
+  order: number = 0;
+  listTags: string[] = [];
 }

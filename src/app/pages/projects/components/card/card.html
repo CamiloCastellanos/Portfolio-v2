@@ -1,5 +1,5 @@
 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 md:gap-8">
-  @for (project of projectList(); track $index) {
+  @for (project of sortedProjectList(); track $index) {
     <div
       class="card bg-base-100 shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 group relative overflow-hidden"
       [style.backgroundColor]="'var(--bg-card)'"
@@ -122,24 +122,17 @@
             </a>
           }
         </div>
-        <!-- Tags -->
-        <!-- <div class="flex flex-wrap gap-2 mt-3 pt-2">
-          <span
-            class="px-2 py-1 text-xs rounded-full bg-[var(--accent-subtle)] text-[var(--accent-text)]"
-          >
-            Tailwind
-          </span>
-          <span
-            class="px-2 py-1 text-xs rounded-full bg-[var(--accent-subtle)] text-[var(--accent-text)]"
-          >
-            Tailwind
-          </span>
-          <span
-            class="px-2 py-1 text-xs rounded-full bg-[var(--accent-subtle)] text-[var(--accent-text)]"
-          >
-            Tailwind
-          </span>
-        </div> -->
+        @if (project.listTags.length > 0) {
+          <div class="flex flex-wrap gap-2 mt-3 pt-2">
+            @for (tag of project.listTags; track $index) {
+              <span
+                class="px-2 py-1 text-xs rounded-full bg-[var(--accent-subtle)] text-[var(--accent-text)]"
+              >
+                {{ tag }}
+              </span>
+            }
+          </div>
+        }
       </div>
     </div>
   }

@@ -30,7 +30,6 @@ export class Projects implements OnDestroy {
     effect(() => {
       const list = this.projectList();
       if (list.length > 0) {
-        // Espera que Angular termine el render del @for
         setTimeout(() => this.initAnimations(), 50);
       }
     });
@@ -68,7 +67,6 @@ export class Projects implements OnDestroy {
         .to('[data-anim="projects-title-line"]', { scaleX: 1, duration: 0.5 }, '-=0.2');
 
       // ── Cards en grid — stagger por filas ──────────────────────────
-
       ScrollTrigger.batch('[data-anim="project-card"]', {
         start: 'top 88%',
         onEnter: (batch) => {
@@ -92,6 +90,7 @@ export class Projects implements OnDestroy {
           });
         },
       });
+
       // ── Tools section ─────────────────────────────────────────────
       ScrollTrigger.batch('[data-anim="tools-section"]', {
         start: 'top 88%',
