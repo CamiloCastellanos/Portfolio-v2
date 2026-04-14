@@ -9,6 +9,7 @@ gsap.registerPlugin(ScrollTrigger);
 //
 import { ToolsLanguageservice } from '../../services/tools-languageservice';
 import { ToolLanguage } from '../../../models/toolLanguage';
+import { ThemeService } from '../../services/theme-service';
 
 @Component({
   selector: 'tools-languages',
@@ -25,7 +26,8 @@ export class ToolsLanguages implements OnInit, AfterViewInit, OnDestroy {
 
   constructor(
     private readonly toolsLanguageservice: ToolsLanguageservice,
-    private readonly el: ElementRef
+    private readonly el: ElementRef,
+    readonly themeService: ThemeService
   ) { }
 
   ngOnInit(): void {

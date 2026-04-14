@@ -22,7 +22,14 @@
       class="group flex items-center gap-3 p-3 rounded-xl bg-[var(--bg-card)] border border-[var(--border)] hover:border-[var(--accent-border)] hover:shadow-md transition-all duration-300 hover:-translate-y-0.5"
       data-anim="tool-item"
     >
-      <img [src]="tool.image" [alt]="tool.name" class="w-8 h-8 object-contain" />
+      <img
+        [src]="tool.image"
+        [alt]="tool.name"
+        class="w-8 h-8 object-contain"
+        [ngClass]="{
+          'power-bi': (tool.name.toLowerCase() == 'power bi') && themeService.isDark(),
+        }"
+      />
       <span
         class="text-sm font-medium text-[var(--text-primary)] group-hover:text-[var(--accent)] transition-colors"
       >
