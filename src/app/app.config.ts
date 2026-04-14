@@ -8,17 +8,7 @@ import { TranslocoHttpLoader } from './shared/services/transloco-http-loader';
 import { firstValueFrom } from 'rxjs';
 import { LanguageDetector } from './shared/services/language-detector';
 import { provideHotToastConfig } from '@ngxpert/hot-toast';
-
-const firebase = {
-  apiKey: "AIzaSyCPo7JTRBbDoU2yIbhbTNREWACO7xlkMew",
-  authDomain: "portafolioangular-4f64f.firebaseapp.com",
-  databaseURL: "https://portafolioangular-4f64f.firebaseio.com",
-  projectId: "portafolioangular-4f64f",
-  storageBucket: "portafolioangular-4f64f.appspot.com",
-  messagingSenderId: "465578885884",
-  appId: "1:465578885884:web:ce4edca29843abe4940d79",
-  measurementId: "G-7C4MYXWBW9"
-}
+import { environment } from '../environments/environmet';
 
 function initializeTransloco() {
   const translocoService = inject(TranslocoService);
@@ -47,7 +37,7 @@ export const appConfig: ApplicationConfig = {
   providers: [
     provideBrowserGlobalErrorListeners(),
     provideRouter(routes),
-    provideFirebaseApp(() => initializeApp(firebase)),
+    provideFirebaseApp(() => initializeApp(environment.firebase)),
     provideFirestore(() => getFirestore()),
     provideTransloco({
       config: {
