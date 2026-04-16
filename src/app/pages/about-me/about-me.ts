@@ -31,10 +31,10 @@ export class AboutMe implements OnInit, OnDestroy {
       const tl = gsap.timeline({
         defaults: { ease: 'power3.out' },
         scrollTrigger: {
-          trigger: 'about-me',   // el componente host
+          trigger: 'about-me',
           start: 'top 80%',      // entra cuando el top del bloque llega al 80% del viewport
-          end: 'top 20%',        // sale cuando el top supera el 20% (scroll hacia arriba)
-          toggleActions: 'play none none reset',
+          end: 'top 20%',
+          toggleActions: 'play none none none',
         },
       });
 
@@ -69,6 +69,6 @@ export class AboutMe implements OnInit, OnDestroy {
   }
 
   ngOnDestroy(): void {
-    this.ctx?.revert(); // limpia todos los tweens y ScrollTriggers
+    this.ctx?.revert();
   }
 }

@@ -42,7 +42,7 @@ export class Resume implements OnDestroy {
   }
 
   private initAnimations(): void {
-    this.ctx?.revert(); // limpia si se re-ejecuta
+    this.ctx?.revert();
 
     this.ctx = gsap.context(() => {
       // ── Estado inicial ────────────────────────────────────────────
@@ -57,7 +57,7 @@ export class Resume implements OnDestroy {
         scrollTrigger: {
           trigger: '[data-anim="resume-title"]',
           start: 'top 82%',
-          toggleActions: 'play none none reset',
+          toggleActions: 'play none none none',
         },
       });
 
@@ -71,7 +71,7 @@ export class Resume implements OnDestroy {
         scrollTrigger: {
           trigger: '[data-anim="timeline-item"]',
           start: 'top 80%',
-          toggleActions: 'play none none reset',
+          toggleActions: 'play none none none',
         },
       });
 
@@ -88,7 +88,7 @@ export class Resume implements OnDestroy {
         scrollTrigger: {
           trigger: '[data-anim="tools-section"]',
           start: 'top 85%',
-          toggleActions: 'play none none reset',
+          toggleActions: 'play none none none',
         },
       });
 

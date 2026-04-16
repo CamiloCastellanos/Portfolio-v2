@@ -39,10 +39,8 @@ export class Gallery implements AfterViewInit, OnDestroy {
       });
 
       // ── Batch: trigger individual por card ────────────────────────
-      // Funciona en 1 o 2 columnas — cada <a> reacciona cuando entra al viewport
       ScrollTrigger.batch('[data-anim="cert-card"]', {
         start: 'top 88%',
-
         onEnter: (batch) => {
           gsap.to(batch, {
             opacity: 1,
@@ -51,18 +49,7 @@ export class Gallery implements AfterViewInit, OnDestroy {
             duration: 0.65,
             ease: 'power3.out',
             stagger: 0.13,
-            // ⚠️ Libera estilos inline para no bloquear hover CSS
-            // hover:-translate-y-1 y group-hover:scale-105 funcionan normalmente
             clearProps: 'transform,opacity',
-          });
-        },
-
-        onLeaveBack: (batch) => {
-          // Reset al salir por arriba — replay al volver a bajar
-          gsap.set(batch, {
-            opacity: 0,
-            y: 36,
-            scale: 0.97,
           });
         },
       });

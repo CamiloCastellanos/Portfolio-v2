@@ -58,7 +58,7 @@ export class Projects implements OnDestroy {
         scrollTrigger: {
           trigger: '[data-anim="projects-title"]',
           start: 'top 82%',
-          toggleActions: 'play none none reset',
+          toggleActions: 'play none none none',
         },
       });
 
@@ -80,15 +80,6 @@ export class Projects implements OnDestroy {
             clearProps: 'transform,opacity',
           });
         },
-        onLeaveBack: (batch) => {
-          // Reset al salir hacia arriba — replay al volver a entrar
-          gsap.set(batch, {
-            opacity: 0,
-            y: 40,
-            scale: 0.96,
-            clearProps: '',
-          });
-        },
       });
 
       // ── Tools section ─────────────────────────────────────────────
@@ -105,9 +96,6 @@ export class Projects implements OnDestroy {
               ScrollTrigger.refresh();
             }
           });
-        },
-        onLeaveBack: (batch) => {
-          gsap.set(batch, { opacity: 0, y: 32 });
         },
       });
 

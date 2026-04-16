@@ -55,7 +55,7 @@ export class ToolsLanguages implements OnInit, AfterViewInit, OnDestroy {
         scrollTrigger: {
           trigger: '[data-anim="tools-title"]',
           start: 'top 85%',
-          toggleActions: 'play none none reset',
+          toggleActions: 'play none none none',
         },
       });
 
@@ -77,11 +77,7 @@ export class ToolsLanguages implements OnInit, AfterViewInit, OnDestroy {
             clearProps: 'transform,opacity',
           });
         },
-        onLeaveBack: (batch) => {
-          gsap.set(batch, { opacity: 0, y: 24, scale: 0.95 });
-        },
       });
-
     }, this.el.nativeElement);
   }
 }

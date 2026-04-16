@@ -1,4 +1,4 @@
-import { Component, OnInit, OnDestroy, ElementRef } from '@angular/core';
+import { Component, OnInit, OnDestroy, ElementRef, AfterViewInit } from '@angular/core';
 //Transloco
 import { TranslocoPipe } from '@ngneat/transloco';
 //GSAP
@@ -16,7 +16,7 @@ import { CertificateService } from '../../shared/services/certificate-service';
   templateUrl: './certificates.html',
   styleUrl: './certificates.css',
 })
-export class Certificates implements OnInit, OnDestroy {
+export class Certificates implements OnInit, OnDestroy, AfterViewInit {
   certificateList: Certificate[] = [];
   private ctx!: gsap.Context;
 
@@ -48,7 +48,7 @@ export class Certificates implements OnInit, OnDestroy {
         scrollTrigger: {
           trigger: '[data-anim="cert-title"]',
           start: 'top 82%',
-          toggleActions: 'play none none reset',
+          toggleActions: 'play none none none',
         },
       });
 

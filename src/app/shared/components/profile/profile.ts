@@ -131,15 +131,6 @@ export class Profile implements OnInit, AfterViewInit, OnDestroy {
             }
           }, '-=0.2');
       },
-
-      onLeaveBack: (batch) => {
-        gsap.set(batch, { opacity: 0, y: 36, scale: 0.97 });
-        gsap.set(this.avatar, { opacity: 0, scale: 0.88 });
-        gsap.set(this.info, { opacity: 0, y: 14 });
-        gsap.set(this.social, { opacity: 0, y: 10 });
-      },
-
-
     });
   }
 
